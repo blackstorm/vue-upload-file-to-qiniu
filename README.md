@@ -50,4 +50,4 @@ npm install && npm run dev
 
 默认端口 ``8081``
 
-  [1]: https://github.com/blackstorm/vue-upload-file-to-qiniu
+  [1]: https://utf-8.live/fe/vue2-upload-file-to-qiniu.html
