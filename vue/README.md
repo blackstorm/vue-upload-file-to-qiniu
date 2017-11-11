@@ -1,6 +1,6 @@
 # vue
 
-> upload file to qiniu
+> Vue 上传文件到七牛
 
 ## Build Setup
 
