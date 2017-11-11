@@ -1,3 +1,6 @@
+# 更新：Vue 2 上传图片或文件到七牛
+文章地址 [Vue 2 上传图片或文件到七牛][1]
+
 # How to use
 
 ## flask app
@@ -46,3 +49,5 @@ npm install && npm run dev
 ```
 
 默认端口 ``8081``
+
+  [1]: https://github.com/blackstorm/vue-upload-file-to-qiniu
