@@ -1,23 +1,18 @@
 import uuid
 from flask_cors import CORS
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from qiniu import Auth
 
 # 设置跨域域名
 allow_origin = '127.0.0.1:8081'
 
 # 密钥 如下
-#access_key = "7sxv818sdsdsdO33C1221123sT1m3M9Qk5oNzZs"
-#secret_key = "ch-IbTsadasdPl8Wxcxcxcxcdsddsdsdsdsds2m"
-access_key = "access_key"
-secret_key = "secret_key"
+access_key = "ak"
+secret_key = "sk"
 
 # 空间名和空间外链
-#bucket_name = 'vue-upload'
-#bucket_domian = 'http://oz6lwq4hy.bkt.clouddn.com';
-
-bucket_name = 'bucket_name'
-bucket_domian = 'bucket_domian'
+bucket_name = 'vue-upload'
+bucket_domian = 'http://oz6lwq4hy.bkt.clouddn.com'
 
 # token 过期时间
 token_expire_time = 3600
@@ -30,6 +25,9 @@ app = Flask(__name__)
 # 注意设置跨域域名
 CORS(app, resources={r"/qiniu/token": {"Access-Control-Allow-Origin": allow_origin}})
 
+@app.route('/', methods=['GET'])
+def index():
+    return render_template('index.html')
 
 @app.route('/qiniu/token', methods=['POST'])
 def get_upload_token():
