@@ -154,7 +154,7 @@ export default {
         // 上传
         this.axios({
           method: 'post',
-          url: url.QINIU_UPLOAD_HTTP_API,
+          url: url.QINIU_UPLOAD_HTTPS_API,
           // 注意：请求头设置（必须！）
           headers: { 'Content-Type': 'multipart/form-data' },
           data: formData,
